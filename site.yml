@@ -1,0 +1,25 @@
+- name: start/stop docker container
+  hosts: docker 
+  #hosts: localhost
+  #connection: local
+  
+  vars:
+#    DOCKER_HOST: tcp://192.168.56.106:4245
+    docker_api_version: 1.21  
+    state: started
+
+  pre_tasks:
+   
+  - debug: msg="docker_api_version={{ docker_api_version }}"  
+
+  - set_fact: docker_api_version="1.21"
+ 
+  tasks:
+  
+  - name: Stop a contianer
+    docker:
+     docker_api_version: "{{ docker_api_version }}"
+     name: dima1
+     image: jenkins:v3
+     state: "{{ state }}"
+     ports: 8080:8080

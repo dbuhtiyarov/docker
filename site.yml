@@ -16,7 +16,7 @@
  
   tasks:
   
-  - name: "{{ state }}" a contianer
+  - name: state a contianer
     docker:
      docker_api_version: "{{ docker_api_version }}"
      name: dima1

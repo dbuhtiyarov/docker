@@ -6,3 +6,9 @@
         name: httpd
         state: latest 
       become: true
+
+    - name: Start HTTPD
+      service: 
+        name: httpd
+        state: started
+      become: true 

@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - yum: 
+        name: httpd
+        state: latest 

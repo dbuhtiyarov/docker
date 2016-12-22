@@ -3,8 +3,11 @@
   tasks:
     - name: Install HTTPD 
       yum:
-        name: httpd
+        name: "{{ item }}"
         state: latest 
+      with_items:
+        - httpd
+        - curl
       become: true
 
     - name: Start HTTPD

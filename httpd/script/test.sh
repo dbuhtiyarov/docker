@@ -2,9 +2,9 @@
 
 code=`curl -I localhost 2>/dev/null | head -n 1 | cut -d$' ' -f2`
 
-if [ $code -ne 200 ]; 
-then
+if [ $code != 200 ]; 
+then echo "CODE is not 200"
 exit 1
-else 
+else echo "CODE is 200"
 exit 0
 fi 

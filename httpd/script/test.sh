@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sleep 100
 code=`curl -I localhost 2>/dev/null | head -n 1 | cut -d$' ' -f2`
 
 echo "CODE is $code"

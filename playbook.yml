@@ -1,4 +1,4 @@
-- name: Installaation
+- name: Installation
   hosts: all
   
   roles:

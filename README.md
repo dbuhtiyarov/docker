@@ -1,4 +1,4 @@
-ppet>
+<snippet>
   <content><![CDATA[
 # ${1:Project Name}
 TODO: Write a project description
